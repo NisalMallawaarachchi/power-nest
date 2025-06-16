@@ -1,0 +1,26 @@
+{
+  "name": "power-nest",
+  "version": "1.0.0",
+  "description": "A beginner-level web app for an electric product store. Built to practice basic web development skills like creating product pages, navigation, and simple shopping features.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NisalMallawaarachchi/power-nest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NisalMallawaarachchi/power-nest/issues"
+  },
+  "homepage": "https://github.com/NisalMallawaarachchi/power-nest#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.2"
+  }
+}
