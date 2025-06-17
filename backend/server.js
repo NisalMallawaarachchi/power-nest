@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
+
 app.post("/api/products", async (req, res) => {
   const product = req.body;
   if (!product.price || !product.name || !product.image) {
@@ -34,6 +35,18 @@ app.post("/api/products", async (req, res) => {
     res.status(201).json({ success: true, data: newProduct });
   } catch (error) {
     console.error("Error saving product:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+app.delete("/api/products/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    await Product.findByIdAndDelete(id);
+    res.status(200).json({ success: true, message: "Product deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting product:", error);
     res.status(500).json({ success: false, message: error.message });
   }
 });
