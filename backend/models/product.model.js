@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
+        required: true
     },
     price: {
         type: Number,
         required: true,
         min: 0
     },
-    Image: {
+    image: {
         type: String,
         required: false,
         default: 'https://via.placeholder.com/150'
